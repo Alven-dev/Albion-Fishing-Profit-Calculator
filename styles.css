@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    overflow: hidden;
+}
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: -3;
+}
+
+#container {
+    width: 70rem;
+    height: 70vh;
+    margin: auto;
+    margin-top: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px 10px;
+    border-radius: 5rem;
+}
+
+.wrapper {
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+    text-align: center;
+    z-index: -2;
+}
+
+.wrapper img {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateY(-4rem);
+}
+
+.hero h1 {
+    color: #FFD700;
+    font-size: 4rem;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.instruction h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+    color: #F5DEB3;
+    text-align: center;
+}
+
+.instruction ol {
+    width: 90%;
+    margin: auto;
+}
+
+.instruction ol li {
+    font-size: 2rem;
+    font-weight: 550;
+    margin: 0.5rem auto;
+    color: #F8F9FA;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.primary-btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 35rem;
+    height: 5rem;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    background: linear-gradient(to right, #FFB347, #FFCC33);
+}
+
+select, input {
+    font-size: 1.6rem;
+    padding: 0.8rem 1.2rem;
+    border: 2px solid #ffaa00;
+    border-radius: 0.8rem;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333; 
+    outline: none;
+}
+
+select:focus, input:focus {
+    border-color: #ff6600;
+    box-shadow: 0 0 8px rgba(255, 102, 0, 0.7);
+}
+
+
+select {
+    appearance: none; 
+    background: rgba(255, 255, 255, 0.9) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="%23333" d="M7 10l5 5 5-5z"/></svg>') no-repeat right 12px center;
+    background-size: 1.6rem;
+    cursor: pointer;
+    width: 23rem;
+}
+
+input::placeholder {
+    color: #888; 
+    font-style: italic;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#result {
+    width: 90%;
+}
+
+#result h3 {
+    font-size: 3rem;
+    text-align: center;
+    color: #F5DEB3;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal input {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal button {
+    margin-top: 1rem;
+    padding: 1rem 1.5rem;
+    background: #FFB347;
+    color: #222;
+    font-size: 2rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.modal button:hover {
+    background: #FFCC33;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

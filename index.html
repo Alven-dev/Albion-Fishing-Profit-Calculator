@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albion fishing profit calculator</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <main>
+        <section class="bg">
+            <div class="wrapper">
+                <img src="/images/background.jpg" alt="Background image">
+            </div>
+        </section>
+        <section id="container">
+            <div id="alertModal" class="modal">
+                <div class="modal-content">
+                    <h3 id="alertMessage"></h3>
+                    <button id="alertClose">OK</button>
+                </div>
+            </div>
+            <div class="hero">
+                <h1>Albion Online Fish Profit calculator</h1>
+            </div>
+            <div class="instruction">
+                <h2>How does it work?</h2>
+                <ol>
+                    <li>Click the button below to set the Chopped Meat current market price or estimated value (it's up to you!).</li>
+                    <li>Select the fish you'd like to check.</li>
+                    <li>Set the current market value or estimated value of the selected fish.</li>
+                    <li>Click the Check button to verify profit and wether it's better to sell the fish or process it.</li>
+                    <li>After each use you'll have to use reset button to clear the inputs.</li>
+                </ol>
+            </div>
+            <div>
+                <button class="primary-btn" id="start">Chopped Fish price</button>
+                <div id="priceModal" class="modal">
+                    <div class="modal-content">
+                        <h3>Enter the price of Chopped Fish :</h3>
+                        <input type="number" id="modalInput" placeholder="Enter price..." />
+                        <button id="modalSubmit">Submit</button>
+                    </div>
+                </div>
+            </div>
+            <form action="index.html">
+                <select name="fish" id="fish">
+                    <!-- insert chopped meat count in value for calculations  -->
+                    <option value="1">Common Rudd</option>
+                    <option value="2">Striped Carp</option>
+                    <option value="3">Albion Perch</option>
+                    <option value="4">Bluescale Pike</option>
+                    <option value="6">Spotted Trout</option>
+                    <option value="8">Brightscale Zander</option>
+                    <option value="10">Danglemouth Catfish</option>
+                    <option value="14">River Sturgeon</option>
+                    <option value="1">Common Herring</option>
+                    <option value="2">Striped Mackerel</option>
+                    <option value="3">Flatshore Plaice</option>
+                    <option value="4">Bluescale Cod</option>
+                    <option value="6">Spotted Wolffish</option>
+                    <option value="8">Strongfin Salmon</option>
+                    <option value="10">Bluefin Tuna</option>
+                    <option value="14">Steelscale Swordfish</option>
+                    <option value="10">Greenriver Eel</option>
+                    <option value="20">Redspring Eel</option>
+                    <option value="30">Deadwater Eel</option>
+                    <option value="10">Upland Coldeye</option>
+                    <option value="20">Mountain Blindeye</option>
+                    <option value="30">Frostpeak Deadeye</option>
+                    <option value="10">Stonestream Lurcher</option>
+                    <option value="20">Rushwater Lurcher</option>
+                    <option value="30">Thunderfall Lurcher</option>
+                    <option value="10">Lowriver Crab</option>
+                    <option value="20">Drybrook Crab</option>
+                    <option value="30">Dusthole Crab</option>
+                    <option value="10">Greenmoor Clam</option>
+                    <option value="20">Murkwater Clam</option>
+                    <option value="30">Blackbog Clam</option>
+                    <option value="10">Shallowshore Squid</option>
+                    <option value="20">Midwater Octopus</option>
+                    <option value="30">Deepwater Kraken</option>
+                    <option value="10">Whitefog Snapper</option>
+                    <option value="20">Clearhaze Snapper</option>
+                    <option value="30">Puremist Snapper</option>
+                </select>
+                <input type="number" id="price" placeholder="Enter price here">
+            </form>
+            <button class="primary-btn" type="submit" id="submit">Check the fish</button>
+            <button class="primary-btn" type="reset" id="reset">Reset</button>
+            <div id="result"></div>
+        </section>
+    </main>
+
+</body>
+<script src="/script.js"></script>
+</html>
