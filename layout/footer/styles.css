@@ -1,0 +1,107 @@
+footer {
+    display: block;
+    background: #141a24;
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    bottom: 0;
+    color: white;
+}
+footer .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+footer .logo p a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: #FFD700;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(255, 102, 0, 0.7);
+}
+footer .logo {
+    position: relative;
+    text-align: center;
+}
+
+.media {
+    display: flex;
+    flex-direction: row;
+}
+
+.media ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    list-style: none;
+}
+
+footer::after, footer::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient( from var(--angle), #FFB347, #FFCC33);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    animation: var(--animation-duration, 10s) spin linear infinite;
+}
+
+footer::before {
+    filter: blur(1rem);
+    opacity: 0.5;
+}
+
+.media ul li a img:hover {
+    transform: scale(1.2);
+    transition: 0.4s;
+}
+
+
+@media (max-width: 768px) {
+    .desktop {
+        display: none !important;
+    }
+
+    footer {
+        height: 7.5rem;
+    }
+
+    footer .container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .mobile {
+        display: none !important;
+    }
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}

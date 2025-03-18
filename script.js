@@ -1,12 +1,15 @@
 
 let startValue;
+// modal load //
 let modal = document.getElementById("priceModal");
 let modalInput = document.getElementById("modalInput");
 let modalSubmit = document.getElementById("modalSubmit");
-
+// alert load //
 let alertModal = document.getElementById("alertModal");
 let alertMessage = document.getElementById("alertMessage");
 let alertClose = document.getElementById("alertClose");
+
+// alert management //
 
 function showAlert(message) {
     alertMessage.textContent = message;
@@ -37,6 +40,8 @@ document.addEventListener("keydown", function (event) {
 });
 
 alertModal.style.display = "none";
+
+// modal management + price insert function //
 
 document.getElementById("start").addEventListener("click", function() {
     modal.style.display = "flex";
@@ -77,11 +82,16 @@ modalSubmit.addEventListener("click", function() {
             modal.style.display = "none";
         }
     });
+
     modal.style.display = "none";
+
+// few loads for math behind function //
 
 let fish = document.getElementById("fish");
 let price = document.getElementById("price");
 let check = document.getElementById("submit");
+
+// input validation with enter //
 
 price.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
@@ -89,6 +99,8 @@ price.addEventListener("keydown", function(event) {
         check.click();
     }
 });
+
+// main function that calculate inputs //
 
 check.addEventListener("click", function() {
     let priceValue = Number(price.value);
@@ -104,15 +116,17 @@ check.addEventListener("click", function() {
     let result = document.getElementById("result");
 
     if (profit >= 1) {
-        myProfit.textContent = ("You should definately sell the fish! Your profit based on current market is : " + profit + " gold.");
+        myProfit.textContent = ("You should definately sell the fish! Your profit based on current market is : " + profit + " gold per fish.");
     } else if (profit === 0) {
         myProfit.textContent = ("Both processing and selling the fish gives same gold value.");
     } else {
-        myProfit.textContent = ("You should process the fish. If you sell the fish you'd be losing : " + profit + " gold.")
+        myProfit.textContent = ("You should process the fish. If you sell the fish you'd be losing : " + profit + " gold per fish.")
     }
     result.appendChild(myProfit);
     check.disabled = true;
 });
+
+// reset page //
 
 let reset = document.getElementById("reset");
 
