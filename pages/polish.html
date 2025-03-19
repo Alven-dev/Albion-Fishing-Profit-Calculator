@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Maximize your profits in Albion Online with our Fishing Profit Calculator. Compare fish prices and decide the best selling strategy!">
+    <meta name="keywords" content="Albion Online Fishing Calculator, Albion Online Profit Calculator, Albion Online Fish Market Prices, Albion Online Chopped Fish Value, Albion Online Fishing Strategy, Albion Online economy guide, Albion fishing silver profit, Albion Online fish vs chopped fish, Best way to sell fish in Albion Online">
+    <title>Albion fishing profit calculator</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/layout/footer/styles.css">
+    <link rel="stylesheet" href="/layout/header/header.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/pages/polish.html"><img src="/images/poland.png" alt="polish flag for polish language version"></a></li>
+                <li><a href="/index.html"><img src="/images/united-kingdom.png" alt="english flag for english language version"></a></li>
+                <!-- <li><a href=""><img src="/images/france.png" alt="french flag for french langauge version"></a></li> -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div id="container">
+            <div id="alertModal" class="modal">
+                <div class="modal-content">
+                    <h3 id="alertMessage"></h3>
+                    <button id="alertClose">OK</button>
+                </div>
+            </div>
+            <div class="hero">
+                <h1>Albion Online kalkulator profitu ryb</h1>
+            </div>
+            <div class="instruction">
+                <h2>Jak to działa?</h2>
+                <ol>
+                    <li>Kliknij przycisk poniżej, aby ustawić aktualną cenę rynkową lub szacunkową wartość Siekajnej Ryby (to zależy od Ciebie!).</li>
+                    <li>Wybierz rybę, którą chciałbyś sprawdzić.</li>
+                    <li>Ustaw bieżącą wartość rynkową lub szacowaną wartość wybranej ryby.</li>
+                    <li>Kliknij przycisk „Sprawdź”, aby zweryfikować zysk i sprawdzić, czy lepiej jest sprzedać rybę, czy ją przetworzyć.</li>
+                    <li>Po każdym użyciu będziesz musiał użyć przycisku „Reset”, aby ponownie użyć kalkulatora.</li>
+                </ol>
+            </div>
+            <div class="content">
+                <button class="primary-btn" id="start">Cena Siekanej Ryby</button>
+                <div id="priceModal" class="modal">
+                    <div class="modal-content">
+                        <h3>Wpisz aktualną cenę siekanej ryby :</h3>
+                        <input type="number" id="modalInput" placeholder="Wpisz cenę..." />
+                        <button id="modalSubmit">Zatwierdź</button>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <form action="index.html">
+                    <select name="fish" id="fish">
+                        <option value="1">Krasnopiórka Pospolita (T1)</option>
+                        <option value="2">Karp Prążkowany (T2)</option>
+                        <option value="3">Pospolity Okoń (T3)</option>
+                        <option value="4">Szczupak Niebieskołuski (T4)</option>
+                        <option value="6">Pstrąg Plamisty (T5)</option>
+                        <option value="8">Sandacz Jasnołuski (T6)</option>
+                        <option value="10">Sum Niskousty (T7)</option>
+                        <option value="14">Jesiotr Rzeczny (T8)</option>
+                        <option value="1">Śledź Pospolity (T1)</option>
+                        <option value="2">Makrela Prążkowana (T2)</option>
+                        <option value="3">Flądra Płytkobrzeżna (T3)</option>
+                        <option value="4">Dorsz Niebieskołuski (T4)</option>
+                        <option value="6">Zębacz Plamisty (T5)</option>
+                        <option value="8">Łosoś Silnopłetwy (T6)</option>
+                        <option value="10">Tuńczyk Niebieskopłetwy (T7)</option>
+                        <option value="14">Włócznik Twardołuski (T8)</option>
+                        <option value="10">Węgorz Rzeczny (T3)</option>
+                        <option value="20">Węgorz Strumykowy (T5)</option>
+                        <option value="30">Węgorz Potokowy (T7)</option>
+                        <option value="10">Zimnook Wyżynny (T3)</option>
+                        <option value="20">Pustook Górski (T5)</option>
+                        <option value="30">Martwook Szczytowy (T7)</option>
+                        <option value="10">Salamandra Strumykowa (T3)</option>
+                        <option value="20">Salamandra Bystra (T5)</option>
+                        <option value="30">Salamandra Burzowa (T7)</option>
+                        <option value="10">Krab Rzeczny (T3)</option>
+                        <option value="20">Krab Potokowy (T5)</option>
+                        <option value="30">Krab Piaskowy (T7)</option>
+                        <option value="10">Małż Piaskołaz (T3)</option>
+                        <option value="20">Małż Mętnowodny (T5)</option>
+                        <option value="30">Małż Bagienny (T7)</option>
+                        <option value="10">Kałamarnica Płyciznowa (T3)</option>
+                        <option value="20">Ośmiornica Śródoceaniczna (T5)</option>
+                        <option value="30">Kraken Głębinowy (T7)</option>
+                        <option value="10">Lucjan Białomglisty (T3)</option>
+                        <option value="20">Lucjan Jasnomglisty (T5)</option>
+                        <option value="30">Lucjan Czystomglisty (T7)</option>
+                    </select>
+                    <input type="number" id="price" placeholder="Wpisz cenę...">
+                </form>
+            </div>
+            <div class="content">
+                <button class="primary-btn" type="submit" id="submit">Sprawdź rybę</button>
+            </div>
+            <div class="content">
+                <button class="primary-btn" type="reset" id="reset">Reset</button>
+            </div>
+            <div id="result"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="copyrights">
+                <p>&copy; 2025 Mikołaj Lorek</p>
+            </div>
+            <div class="logo">
+                <p><a href="/index.html" title="Frontend Developer Alven.dev - Home page">Alven.dev</a></p>
+            </div>
+            <div class="media desktop">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/miko%C5%82aj-lorek-b72bb5352/" target="_blank" title="Frontend Developer Alven.dev - My linkedIn profile"><img src="/images/linkedin.png" alt="LinkedIn icon"></a></li>
+                    <li><a href="https://github.com/Alven-dev" target="_blank" title="Frontend Developer Alven.dev - My GitHub profile"><img src="/images/github.png" alt="GitHub icon"></a></li>
+                    <li><a href="#Discord" target="_blank" title="Frontend Developer Alven.dev - My Discord server"><img src="/images/discord.png" alt="Discord icon"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="/js/skrypt.js"></script>
+</html>

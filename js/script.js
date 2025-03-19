@@ -57,7 +57,7 @@ modalSubmit.addEventListener("click", function() {
             modal.style.display = "none";
             modalInput.value = "";
             setTimeout(() => {
-                showAlert("The Chopped fish value is set to " + startValue + " gold.");
+                showAlert("The Chopped fish value is set to " + startValue + " silver.");
             }, 100);
         } else {
             showAlert("This is not a valid number!");
