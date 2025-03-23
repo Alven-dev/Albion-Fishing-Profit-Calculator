@@ -1,4 +1,5 @@
 User-agent: *
 Disallow:
-
+User-agent: Discordbot
+Allow: /
 Sitemap: https://albionfishingcalculator.online/sitemap.xml
