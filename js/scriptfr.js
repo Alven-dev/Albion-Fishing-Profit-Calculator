@@ -57,10 +57,10 @@ modalSubmit.addEventListener("click", function() {
             modal.style.display = "none";
             modalInput.value = "";
             setTimeout(() => {
-                showAlert("The Chopped fish value is set to " + startValue + " silver.");
+                showAlert("La valeur du poisson haché est fixée à " + startValue + " d'argent.");
             }, 100);
         } else {
-            showAlert("This is not a valid number!");
+            showAlert("Ce numéro n'est pas valide !");
         }
     });
 
@@ -108,7 +108,7 @@ check.addEventListener("click", function() {
     if (!priceValue === null || priceValue >= 0) {
         profit = priceValue - fishValue;
     } else {
-        showAlert("The following value is not correct!");
+        showAlert("La valeur suivante n'est pas correcte !");
         return;
     }
 
@@ -116,11 +116,11 @@ check.addEventListener("click", function() {
     let result = document.getElementById("result");
 
     if (profit >= 1) {
-        myProfit.textContent = ("You should definately sell the fish! Your profit based on current market is : " + profit + " silver per fish.");
+        myProfit.textContent = ("Vous devriez absolument vendre le poisson ! Votre profit basé sur le marché actuel est de : " + profit + " argent par poisson.");
     } else if (profit === 0) {
-        myProfit.textContent = ("Both processing and selling the fish gives same silver value.");
+        myProfit.textContent = ("La vente et la transformation du poisson rapportent exactement la même valeur en argent.");
     } else {
-        myProfit.textContent = ("You should process the fish. If you sell the fish you'd be losing : " + profit + " silver per fish.")
+        myProfit.textContent = ("Vous devriez transformer le poisson. Si vous le vendez tel quel, vous perdrez : " + profit + " argent par poisson.");
     }
     result.appendChild(myProfit);
     check.disabled = true;

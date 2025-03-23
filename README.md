@@ -16,3 +16,10 @@ In upcoming patches I'm going to implement :
 - more languages (next languages is going to be french)
 - Fish images
 - Sauce calculator
+
+Patch to version 1.1.1
+
+Changes
+
+- Few syntax error corrected.
+- French language was added.
